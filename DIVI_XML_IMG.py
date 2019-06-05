@@ -12,6 +12,10 @@ import shutil
 xml_list = glob('*xml')
 print(len(xml_list))
 
-#os.makedirs('xml')
+try:
+    os.makedirs('xml')
+except:
+    print('已存在')
+    
 for i in xml_list:
     shutil.move(i,'xml')
