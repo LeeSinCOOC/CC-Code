@@ -1,4 +1,4 @@
-Windows下批量删除指定后缀文件
+# Windows下批量删除指定后缀文件
 
 ```
 del /a /f /s /q   "*.jpg" "*.json"
@@ -7,4 +7,10 @@ del /a /f /s /q   "*.jpg" "*.json"
 /q 无需确认
 /s 可以删除子文件夹中的文件
 ```
+
+# 查看诊断信息
+
+可以看硬件参数
+
+cmd ---> dxdiag 
 
