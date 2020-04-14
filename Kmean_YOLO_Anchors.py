@@ -1,3 +1,4 @@
+# _*_ coding: utf-8 _*_
 import numpy as np
 import glob
 import xml.etree.ElementTree as ET
@@ -122,6 +123,12 @@ print("Yolov3 Accuracy: {:.2f}%".format(avg_iou(data, yolov3out) * 100))
 # 生成resize到416对应的anchor
 print("Boxes:\n {}-{}".format(out[:, 0]*416, out[:, 1]*416))
 # print("Boxes:\n {}".format(out))
+
+
+yolov3_out_clusters = [[int(i),int(j)] for i,j in zip(out[:, 0]*416, out[:, 1]*416)]
+print('\n' +  '*'*10 + "生成的Anchors:" + '*'*10 + '\n' +
+      str(yolov3_out_clusters) + '\n' )
+
 
 ratios = np.around(out[:, 0] / out[:, 1], decimals=2).tolist()
 print("Ratios:\n {}".format(sorted(ratios)))
