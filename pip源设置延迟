@@ -1,0 +1,3 @@
+pip --default-timeout=100 install packagename   
+--或者不使用缓存
+pip  --no-cache-dir install packagename
