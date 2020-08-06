@@ -8,3 +8,10 @@
   5.sudo apt-get update
 我的是18：
   1.sudo rm /var/lib/dpkg/lock-frontend
+
+【screen相关】
+如何kill掉一个screen：  screen -S session_name -X quit
+创建新screen:screen -S yourname 
+退出：ctrl + a ---> ctrl + d
+列出：screen -ls
+回会话：screen -r yourname
