@@ -15,3 +15,7 @@
 退出：ctrl + a ---> ctrl + d
 列出：screen -ls
 回会话：screen -r yourname
+
+【文件名乱码问题】
+sudo apt-get install convmv
+convmv -f gbk -t utf-8 -r --notest /home/wwwroot
