@@ -19,3 +19,6 @@
 【文件名乱码问题】
 sudo apt-get install convmv
 convmv -f gbk -t utf-8 -r --notest /home/wwwroot
+写成脚本文件：
+#!/bin/bash
+sudo convmv -f gbk -t utf-8 -r --notest /tmp/OpenFile/
