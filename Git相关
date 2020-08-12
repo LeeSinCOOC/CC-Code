@@ -17,7 +17,6 @@ gitbook serve --lrport 35730 --port 4001
 通过 git checkout -- 文件名 命令可以撤销文件在工作区的修改。
 通过 git reset 文件名 命令可以撤销指定文件的 git add 操作，即这个文件在暂存区的修改。
 通过 git reset 命令可以撤销之前的所有 git add 操作，即在暂存区的修改。
-通过 git rm --cached <file> 从暂存区取消
 
 修改后，文件没有放入暂存区（即文件一直在工作区）：用 git checkout -- 文件名 撤销工作区的改动（回到跟版本库一样的状态，即回到最近一次 git commit时的状态，所有改动全部清除）
 
@@ -32,4 +31,12 @@ git add -A  添加所有变化
 git add -u  添加被修改(modified)和被删除(deleted)文件，不包括新文件(new)
 git add .   添加新文件(new)和被修改(modified)文件，不包括被删除(deleted)文件
 
-
+【删除文件】
+删除暂存区或分支上的文件, 同时工作区也不需要这个文件了
+1 git rm file_path
+2 git commit -m 'delete somefile'
+3 git push
+需要删除暂存区或分支上的文件, 但本地又需要使用, 只是不希望这个文件被版本控制
+git rm --cached file_path # 文件跟踪
+git commit -m 'delete remote somefile'
+git push
