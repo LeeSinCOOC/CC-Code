@@ -1,3 +1,15 @@
 【GitBook服务多开】
 gitbook build
 gitbook serve --lrport 35730 --port 4001
+
+【版本回退问题】
+1.git checkout -- filename    放弃工作区的修改
+2.git status 查看状态
+3.git add   添加文件到暂存区
+4.git commit filename -m 'message'    提交文件到库
+5.git log   查看历史版本
+6.git reflog    查看命令历史
+7.git reset --soft HEAD^：将最近一次提交节点的提交记录回退到暂存区
+8.git reset --mixed HEAD^：将最近一次提交节点的提交记录回退到工作区
+9.git reset --hard HEAD^：将最近一次提交节点的提交记录全部清除
+10.git reset --hard commitid:跳到指定的版本
