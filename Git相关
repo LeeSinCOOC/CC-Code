@@ -13,3 +13,8 @@ gitbook serve --lrport 35730 --port 4001
 8.git reset --mixed HEAD^：将最近一次提交节点的提交记录回退到工作区
 9.git reset --hard HEAD^：将最近一次提交节点的提交记录全部清除
 10.git reset --hard commitid:跳到指定的版本
+
+【添加文件】
+git add -A  添加所有变化
+git add -u  添加被修改(modified)和被删除(deleted)文件，不包括新文件(new)
+git add .   添加新文件(new)和被修改(modified)文件，不包括被删除(deleted)文件
