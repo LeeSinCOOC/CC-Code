@@ -1,0 +1,3 @@
+【GitBook服务多开】
+gitbook build
+gitbook serve --lrport 35730 --port 4001
