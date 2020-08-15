@@ -40,3 +40,6 @@ git add .   添加新文件(new)和被修改(modified)文件，不包括被删�
 git rm --cached file_path # 文件跟踪
 git commit -m 'delete remote somefile'
 git push
+
+【git status 中文乱码】
+git config --global core.quotepath false
