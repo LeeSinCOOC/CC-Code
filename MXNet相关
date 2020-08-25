@@ -1,0 +1,7 @@
+【NDarra转numpy格式】
+D.asnumpy()
+
+【numpy转list】
+D.tolist()
+
+json就可以直接转换list这些数据为json格式了
