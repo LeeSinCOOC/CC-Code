@@ -1,3 +1,9 @@
 中文手册：
 https://docker_practice.gitee.io/zh-cn/install/ubuntu.html
 
+删除镜像：
+docker image ls
+docker image rm [] # 需要注意是否有容器在占用镜像，如果有无法删除
+删除容器：
+docker ps -a
+docker rm []
