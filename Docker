@@ -7,3 +7,14 @@ docker image rm [] # 需要注意是否有容器在占用镜像，如果有无�
 删除容器：
 docker ps -a
 docker rm []
+
+修改Docker本地镜像与容器的存储位置的方法
+1.软连接
+  mv /var/lib/docker /root/data/docker
+  ln -s /root/data/docker /var/lib/docker
+2.配置文件
+Ubuntu 中的位置是：/etc/default/docker
+  如果是 Ubuntu 则添加下面这行（因为 Ubuntu 默认没开启 selinux）：
+  OPTIONS=--graph="/root/data/docker" -H fd://
+  # 或者
+  DOCKER_OPTS="-g /root/data/docker"
