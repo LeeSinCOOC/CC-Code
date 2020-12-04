@@ -1,0 +1,21 @@
+###### 压缩文件 #######
+import zipfile
+def zip_files():
+    l = os.listdir('D:')
+    base = os.path.abspath('.') + '\\'
+    imgsPath = [os.path.join(base, i) for i in l]
+
+    start = 5100
+    end = 5200
+    for i in range((end-start)//100):
+        index = l.index('00{}.jpg'.format(start))
+        zip_name = 'Z_{}-{}.zip'.format(start, start + 99)
+        for file in imgsPath[index:index+100]:
+            zip = zipfile.ZipFile(zip_name, 'a', zipfile.ZIP_DEFLATED)
+            print('compressing', file)
+            zip.write(file,arcname='00{}.jpg'.format(start))
+            start += 1
+        zip.close()
+        index += 100
+
+zip_files()
