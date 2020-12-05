@@ -1,8 +1,16 @@
-pip --default-timeout=100 install packagename   
---或者不使用缓存
-pip  --no-cache-dir install packagename
+改延时，默认6000
+  pip --default-timeout=100 install packagename   
+  
+不使用缓存
+  pip  --no-cache-dir install packagename
 
-
+报错
 【Can not perform a '--user' install. User site-packages are not visible in this virtualenv.】
-vim ~/.config/pip/pip.conf
-user=false
+  vim ~/.config/pip/pip.conf
+  user=false
+
+临时用源
+pip install https://pypi.douban.com/simple/
+
+缓存位置：
+  ~/.cache/pip
