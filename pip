@@ -25,3 +25,9 @@
     index-url = https://pypi.tuna.tsinghua.edu.cn/simple
 缓存位置：
   ~/.cache/pip
+
+下载whl包：
+pip download -r requirements.txt -d /mnt/data/ChenJian/XiaoLong_PigCount/pipwhl -i  http://mirrors.aliyun.com/pypi/simple/ --trusted-host mirrors.aliyun.com
+
+安装whl包：
+pip install -r pipwhl/*
