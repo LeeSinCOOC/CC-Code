@@ -18,3 +18,10 @@ Ubuntu 中的位置是：/etc/default/docker
   OPTIONS=--graph="/root/data/docker" -H fd://
   # 或者
   DOCKER_OPTS="-g /root/data/docker"
+
+停容器：
+docker stop [name]
+
+容器部署：
+docker-compose up -d
+
