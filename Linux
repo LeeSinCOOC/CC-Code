@@ -1,0 +1,5 @@
+没权限切换：
+sudo -i
+
+找文件：
+find /home -name *init
