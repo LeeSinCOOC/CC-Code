@@ -3,3 +3,6 @@ sudo -i
 
 找文件：
 find /home -name *init
+
+查线程进程CPU参数
+cat /proc/cpuinfo
