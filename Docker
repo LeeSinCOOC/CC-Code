@@ -26,7 +26,7 @@ docker stop [name]
 docker-compose up -d
 
 新建容器：
-docker run -it --name YZ2021_02 ubuntu:16.04 /bin/bash
+ docker run -it -v YZ2021_02:/YZ2021_02 --gpus all --name YZ2021_02 tamay/cuda9.2-cudnn7-devel-python3.6:latest /bin/bash
 
 启动容器：
 docker start YZ2021_02
