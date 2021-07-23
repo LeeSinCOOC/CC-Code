@@ -25,3 +25,17 @@ docker stop [name]
 容器部署：
 docker-compose up -d
 
+新建容器：
+docker run -it --name YZ2021_02 ubuntu:16.04 /bin/bash
+
+启动容器：
+docker start YZ2021_02
+
+进入容器：
+docker exec -it YZ2021_02 /bin/bash
+
+容器换源：
+sudo cp /etc/apt/sources.list /etc/apt/sources.list.bak
+echo deb http://mirrors.aliyun.com/ubuntu/ bionic main restricted universe multiverse >> /etc/apt/sources.list
+
+
