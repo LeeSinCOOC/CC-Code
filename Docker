@@ -34,6 +34,13 @@ docker start YZ2021_02
 进入容器：
 docker exec -it YZ2021_02 /bin/bash
 
+修改 Docker 的默认存储路径：
+vi /etc/docker/daemon.json 
+{
+  "registry-mirrors": ["http://hub-mirror.c.163.com"],
+  "data-root": "/www/docker"
+}
+
 容器换源：
 sudo cp /etc/apt/sources.list /etc/apt/sources.list.bak
 echo deb http://mirrors.aliyun.com/ubuntu/ bionic main restricted universe multiverse >> /etc/apt/sources.list
