@@ -45,4 +45,6 @@ vi /etc/docker/daemon.json
 sudo cp /etc/apt/sources.list /etc/apt/sources.list.bak
 echo deb http://mirrors.aliyun.com/ubuntu/ bionic main restricted universe multiverse >> /etc/apt/sources.list
 
+保存镜像：
+docker save -o mynetcore.tar mynetcore:v1
 
