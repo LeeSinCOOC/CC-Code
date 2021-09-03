@@ -6,3 +6,32 @@ find /home -name *init
 
 查线程进程CPU参数
 cat /proc/cpuinfo
+
+查看物理cpu个数
+grep 'physical id' /proc/cpuinfo | sort -u
+
+查看核心数量
+grep 'core id' /proc/cpuinfo | sort -u | wc -l
+
+查看线程数
+grep 'processor' /proc/cpuinfo | sort -u | wc -l
+
+GPU显存却被占用了很多
+fuser -v /dev/nvidia*
+
+kill -9 ID
+
+查看文件大小
+du -h coco/
+
+查看磁盘使用情况
+df -h
+
+tar压缩/解压
+tar -cf xxx.tar x x
+tar -xf xxx.tar
+tar -tvf 列出文件
+
+后台运行程序
+nohup python command &
+
