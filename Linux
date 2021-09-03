@@ -35,3 +35,9 @@ tar -tvf 列出文件
 后台运行程序
 nohup python command &
 
+Screen命令使用：
+screen -S name  打开新窗口
+screen -r name  重现窗口
+screen -ls      列出当前所有的session
+screen -d name  远程detach某个session
+screen -wipe    清除该会话
