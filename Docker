@@ -49,3 +49,7 @@ echo deb http://mirrors.aliyun.com/ubuntu/ bionic main restricted universe multi
 保存镜像：
 docker save -o mynetcore.tar mynetcore:v1
 
+Docker改镜像位置：
+service docker stop
+mv /var/lib/docker /root/data/docker
+ln -s /root/data/docker /var/lib/docker
