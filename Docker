@@ -59,5 +59,6 @@ sudo cp /etc/apt/sources.list /etc/apt/sources.list.bak
 echo deb http://mirrors.aliyun.com/ubuntu/ bionic main restricted universe multiverse >> /etc/apt/sources.list
 
 保存镜像：
+docker commit a589933536b1[容器ID] cmii-bodypose-0913[镜像名称]
 docker save -o mynetcore.tar mynetcore:v1
-
+docker load < rocketmq.tar
