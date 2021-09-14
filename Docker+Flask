@@ -35,3 +35,11 @@ if __name__ == '__main__':
     app.run(host='0.0.0.0',
         port=5000,debug=True)
         
+########################  gunicorn + gevent  #################################
+pip install gunicorn gevent
+######################### gunicorn.conf.py ###################################
+workers = 5   
+worker_class = "gevent"  
+bind = "0.0.0.0:6009"
+#############################  CMD  ##########################################
+gunicorn [app文件名不带后缀]:app -c gunicorn.conf.py 
