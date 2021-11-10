@@ -62,3 +62,10 @@ echo deb http://mirrors.aliyun.com/ubuntu/ bionic main restricted universe multi
 docker commit a589933536b1[容器ID] cmii-bodypose-0913[镜像名称]
 docker save -o mynetcore.tar mynetcore:v1
 docker load < rocketmq.tar
+
+查看日志：
+docker logs [OPTIONS] CONTAINER
+  -f : 跟踪日志输出
+  --since :显示某个开始时间的所有日志
+  -t : 显示时间戳
+  --tail :仅列出最新N条容器日志
