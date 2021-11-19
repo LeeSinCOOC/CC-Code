@@ -47,3 +47,6 @@ ls -l | grep "^-" | wc -l
 
 计算文件大小：
 du -h --max-depth=1
+
+删除指定文件
+find ./pigtrack/ -name "*.pyc" | xargs rm -rf
