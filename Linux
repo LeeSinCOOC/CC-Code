@@ -50,3 +50,13 @@ du -h --max-depth=1
 
 删除指定文件
 find ./pigtrack/ -name "*.pyc" | xargs rm -rf
+
+磁盘挂载：
+1.查看新添加的盘符，可以在 root 下使用 fdisk -l 命令
+2.格式化硬盘文件系统，mkfs -t ext4 /dev/sde
+3.挂载硬盘，mount /dev/sde /data
+4.开机自动挂载，
+  vim /etc/fstab
+  # 在最后面加入指定信息
+  UUID=67E91005-EB18-4E24-8410-EB9A1C2E3882 /data ext4 defaults 0 0
+  
