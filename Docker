@@ -69,3 +69,6 @@ docker logs [OPTIONS] CONTAINER
   --since :显示某个开始时间的所有日志
   -t : 显示时间戳
   --tail :仅列出最新N条容器日志
+
+查看映射docker容器的路径：
+docker inspect 2021-pig-trackcode | grep Mount -A 20
