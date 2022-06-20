@@ -60,3 +60,5 @@ find ./pigtrack/ -name "*.pyc" | xargs rm -rf
   # 在最后面加入指定信息
   UUID=67E91005-EB18-4E24-8410-EB9A1C2E3882 /data ext4 defaults 0 0
   
+查看内存：
+watch -n 1 free -h 
