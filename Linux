@@ -62,3 +62,6 @@ find ./pigtrack/ -name "*.pyc" | xargs rm -rf
   
 查看内存：
 watch -n 1 free -h 
+
+kill所有python程序
+pkill python
