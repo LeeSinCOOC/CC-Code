@@ -65,3 +65,7 @@ watch -n 1 free -h
 
 kill所有python程序
 pkill python
+
+清除内存：
+echo 3 > /proc/sys/vm/drop_caches
+
