@@ -1,0 +1,73 @@
+version: 1
+disable_existing_loggers: False
+# formatters配置了日志输出时的样式
+# formatters定义了一组formatID,有不同的格式;
+formatters:
+  brief:
+      format: "%(asctime)s - %(message)s"
+  simple:
+      format: "%(asctime)s - [%(name)s] - [%(levelname)s] :%(levelno)s: %(message)s"
+      datefmt: '%F %T'
+# handlers配置了需要处理的日志信息,logging模块的handler只有streamhandler和filehandler
+handlers:
+  console:
+      class : logging.StreamHandler
+      formatter: brief
+      level   : INFO
+      stream  : ext://sys.stdout
+  debug_file_handler:
+      class : logging.handlers.RotatingFileHandler
+      level: DEBUG
+      formatter: simple
+      filename: ./CC_Log/DEBUG.log
+      maxBytes: 10485760
+      backupCount: 10
+      encoding: utf8
+  info_file_handler:
+      class: logging.handlers.TimedRotatingFileHandler
+      level: INFO
+      formatter: simple
+      filename: ./CC_Log/INFO.log
+      when: D
+      backupCount: 10
+      encoding: utf8
+  warning_file_handler:
+      class: logging.handlers.RotatingFileHandler
+      level: WARNING
+      formatter: simple
+      filename: ./CC_Log/WARNING.log
+      maxBytes: 10485760
+      backupCount: 10
+      encoding: utf8
+  error_file_handler:
+      class: logging.handlers.RotatingFileHandler
+      level: ERROR
+      formatter: simple
+      filename: ./CC_Log/ERROR.log
+      maxBytes: 10485760
+      backupCount: 10
+      encoding: utf8
+  critical_file_handler:
+      class: logging.handlers.RotatingFileHandler
+      level: CRITICAL
+      formatter: simple
+      filename: ./CC_Log/CRITICAL.log
+      maxBytes: 10485760
+      backupCount: 10
+      encoding: utf8
+loggers:
+#fileLogger, 就是在代码中通过logger = logging.getLogger("fileLogger")来获得该类型的logger
+# DEBUG 、INFO 、WARNING、ERROR、CRITICAL
+  CC_Log:
+      level: DEBUG
+      handlers: [console,
+                 debug_file_handler,
+                 info_file_handler,
+                 warning_file_handler,
+                 error_file_handler,
+                 critical_file_handler]
+# root为默认情况下的输出配置, 当logging.getLogger("fileLoggername")里面的fileLoggername没有传值的时候,
+# 就是用的这个默认的root,如logging.getLogger(__name__)或logging.getLogger()
+#root:
+#    level: DEBUG
+#    handlers: [console]

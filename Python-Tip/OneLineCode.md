@@ -9,6 +9,10 @@ tring = ','.join(list(map(str,string_list)))
 from tqdm import tqdm
 for i,j in enumerate(tqdm(a,desc='blue',colour='green')):
 ```
+### python 创建一个空文件
+```python
+os.mknod("my_file.txt")
+```
 
 ## 非标准库
 ### torch取值
