@@ -1,7 +1,0 @@
-【修改pip源】
-  1.修改 xx/.pip/pip.conf
-  2.[global]
-    timeout = 300
-    index-url = https://pypi.tuna.tsinghua.edu.cn/simple
-    [install]
-    trusted-host = tsinghua.edu.cn

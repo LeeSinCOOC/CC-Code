@@ -1,9 +1,15 @@
-【一种在IPv4中运行】：
+## Flask 学习笔记
+### 在IPv4中运行
+```python
 app.run(host='0.0.0.0', port=port, debug=True)
-【一种在IPv6中运行】：
+```
+### 在IPv6中运行
+```python
 app.run(host='::', port=port, debug=True)
+```
 
-【获取视频并解帧】
+### 案例：获取视频并解帧
+```python
 from flask import Flask, request,jsonify
 import imageio
 import numpy as np
@@ -13,7 +19,7 @@ import cv2
 # from PIL import ImageFile
 # ImageFile.LOAD_TRUNCATED_IMAGES = True
 app = Flask(__name__)
-@app.route('/WholeNumber',methods=['GET','POST'])
+@app.route('/',methods=['GET','POST'])
 def index():
     if request.method == 'POST':
         video = request.files['mp4'].read()   # .save('cache.mp4')保存视频
@@ -25,3 +31,4 @@ def index():
 if __name__ == '__main__':
     app.run(host='0.0.0.0',
             port=8000, debug=True)
+```

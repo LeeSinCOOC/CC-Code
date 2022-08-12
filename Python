@@ -1,8 +1,0 @@
-数值列表转字符串：
-  tring = ','.join(list(map(str,string_list)))
-  
-torch取值：
-  O = outputs.detach().cpu().numpy().tolist()
-
-tqdm 进度条：
-for i,j in enumerate(tqdm(a,desc='blue',colour='green')):
