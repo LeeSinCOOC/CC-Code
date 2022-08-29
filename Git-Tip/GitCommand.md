@@ -64,3 +64,17 @@ git config --global core.quotepath false
 ```
 git checkout -b newBranch
 ```
+### 【远程操作】
+```
+1. 拉取合并
+git full origin master
+//
+git fetch origin master
+git diff
+git merge master
+2. 上传
+git add .
+git commit -m "xxx"
+git push -u origin master
+```
+
