@@ -60,3 +60,7 @@ git push
 ```shell
 git config --global core.quotepath false
 ```
+### 【创建并切换到新分支】
+```
+git checkout -b newBranch
+```
