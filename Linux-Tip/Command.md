@@ -7,6 +7,10 @@ sudo -i
 ```shell
 pkill python
 ```
+### 杀死所有进程除了1122 
+```shell
+killall5 -o 1122
+```
 
 ### 找文件：
 ```shell
