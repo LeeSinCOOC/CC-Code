@@ -77,4 +77,7 @@ git add .
 git commit -m "xxx"
 git push -u origin master
 ```
+### 【配置】
+git config --global user.name "   "
+git config --global user.email "  "
 
