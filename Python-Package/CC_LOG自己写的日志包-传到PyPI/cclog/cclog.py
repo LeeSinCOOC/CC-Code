@@ -3,14 +3,23 @@ import os
 from logging import config
 import yaml
 
-
 class CC_LOG:
     def __init__(self, configPath='log.yaml'):
         self.path = os.path.join(os.path.dirname(__file__), configPath)
         self.create_logdirs()
         self.use_yaml_config()
         self.CC_Log = logging.getLogger("CC_Log")
-
+        self.demo = f'''
+                {'#'*50}
+                from cclog import clog
+                log = clog()
+                log.debug('debug')
+                log.info('info ')
+                log.warning('warning')
+                log.error('error')
+                log.critical('critical')
+                {'#'*50}
+              '''
     def debug(self, string):
         self.CC_Log.debug(string)
 
