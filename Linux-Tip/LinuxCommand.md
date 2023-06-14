@@ -86,6 +86,10 @@ find ./pigtrack/ -name "*.pyc" | xargs rm -rf
 ```
 UUID=67E91005-EB18-4E24-8410-EB9A1C2E3882 /data ext4 defaults 0 0
 ```
+5.查看UUID
+```
+blkid -s UUID /dev/sdb
+```
 
 ### 查看内存：
 ```shell
