@@ -41,6 +41,7 @@ docker-compose up -d
 ### 新建容器：
 ```shell
 docker run -it -p 6000:6000 --shm-size 4G -v [宿主机绝对路径]:[容器路径] --privileged=true --gpus all --name [容器名] [镜像名] /bin/bash
+-u root 增加容器内权限
 nvidia-docker run -it -p 6000:6000 --shm-size 4G -v  [宿主机绝对路径]:[容器路径] --name [容器名] [镜像名] /bin/bash
 ```
 
