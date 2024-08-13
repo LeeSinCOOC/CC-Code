@@ -1,4 +1,4 @@
-。## Python pip 常用笔记
+## Python pip 常用笔记
 
 ### 改延时，默认6000
 ```shell
