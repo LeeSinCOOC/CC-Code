@@ -1,4 +1,4 @@
-## Python pip 常用笔记
+。## Python pip 常用笔记
 
 ### 改延时，默认6000
 ```shell
@@ -45,4 +45,12 @@ pip download -r requirements.txt -d /mnt/data/ChenJian/XiaoLong_PigCount/pipwhl 
 ### 安装whl包：
 ```shell
 pip install -r pipwhl/*
+```
+
+### conda换源使用：
+```shell
+conda config --remove-key channels
+conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/main/
+conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/free/
+conda config --set show_channel_urls yes
 ```
