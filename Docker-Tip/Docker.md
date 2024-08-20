@@ -111,3 +111,22 @@ docker logs [OPTIONS] CONTAINER
 ```shell
 docker inspect code | grep Mount -A 20
 ```
+### 改源
+```
+{
+  "registry-mirrors": [
+    "https://dockerhub.icu",
+    "https://docker.anyhub.us.kg",
+    "https://dockerhub.jobcher.com",
+    "https://dockerhub.icu",
+    "https://docker.ckyl.me",
+    "https://docker.awsl9527.ch"
+  ],
+  "runtimes": {
+    "nvidia": {
+      "path": "nvidia-container-runtime",
+      "runtimeArgs": []
+    }
+  }
+}
+```
